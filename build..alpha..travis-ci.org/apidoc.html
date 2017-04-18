@@ -1,0 +1,833 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/Raynos/dom-delegator"
+
+    >dom-delegator (v13.1.0)</a>
+</h1>
+<h4>Decorate elements with delegated events</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-delegator">module dom-delegator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom-delegator">
+            function <span class="apidocSignatureSpan"></span>dom-delegator
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.allocateHandle">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>allocateHandle
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>dom_delegator
+            <span class="apidocSignatureSpan">(document)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.proxy_event">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>proxy_event
+            <span class="apidocSignatureSpan">(ev)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.toString">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.transformHandle">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>transformHandle
+            <span class="apidocSignatureSpan">(handle, broadcast)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dom-delegator.</span>dom_delegator.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">dom-delegator.</span>proxy_event.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-delegator.dom_delegator">module dom-delegator.dom_delegator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.dom_delegator">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>dom_delegator
+            <span class="apidocSignatureSpan">(document)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.allocateHandle">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.</span>allocateHandle
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.transformHandle">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.</span>transformHandle
+            <span class="apidocSignatureSpan">(handle, broadcast)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-delegator.dom_delegator.prototype">module dom-delegator.dom_delegator.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.prototype.addEventListener">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>addEventListener
+            <span class="apidocSignatureSpan">(target, type, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.prototype.addGlobalEventListener">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>addGlobalEventListener
+            <span class="apidocSignatureSpan">(eventName, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.prototype.listenTo">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>listenTo
+            <span class="apidocSignatureSpan">(eventName)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.prototype.removeEventListener">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>removeEventListener
+            <span class="apidocSignatureSpan">(target, type, handler)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.prototype.removeGlobalEventListener">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>removeGlobalEventListener
+            <span class="apidocSignatureSpan">(eventName, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.dom_delegator.prototype.unlistenTo">
+            function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>unlistenTo
+            <span class="apidocSignatureSpan">(eventName)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-delegator.proxy_event">module dom-delegator.proxy_event</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.proxy_event.proxy_event">
+            function <span class="apidocSignatureSpan">dom-delegator.</span>proxy_event
+            <span class="apidocSignatureSpan">(ev)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dom-delegator.proxy_event.prototype">module dom-delegator.proxy_event.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.proxy_event.prototype.preventDefault">
+            function <span class="apidocSignatureSpan">dom-delegator.proxy_event.prototype.</span>preventDefault
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dom-delegator.proxy_event.prototype.startPropagation">
+            function <span class="apidocSignatureSpan">dom-delegator.proxy_event.prototype.</span>startPropagation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-delegator" id="apidoc.module.dom-delegator">module dom-delegator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom-delegator" id="apidoc.element.dom-delegator.dom-delegator">
+        function <span class="apidocSignatureSpan"></span>dom-delegator
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Delegator(opts) {
+    opts = opts || {}
+    var document = opts.document || globalDocument
+
+    var cacheKey = document[cacheTokenKey]
+
+    if (!cacheKey) {
+        cacheKey =
+            document[cacheTokenKey] = cuid()
+    }
+
+    var delegator = delegatorCache.delegators[cacheKey]
+
+    if (!delegator) {
+        delegator = delegatorCache.delegators[cacheKey] =
+            new DOMDelegator(document)
+    }
+
+    if (opts.defaultEvents !== false) {
+        for (var i = 0; i &#x3c; commonEvents.length; i++) {
+            delegator.listenTo(commonEvents[i])
+        }
+    }
+
+    return delegator
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.allocateHandle" id="apidoc.element.dom-delegator.allocateHandle">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>allocateHandle
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function allocateHandle(func) {
+    var handle = new Handle()
+
+    HANDLER_STORE(handle).func = func;
+
+    return handle
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return handle
+}
+
+DOMDelegator.transformHandle =
+function transformHandle(handle, broadcast) {
+    var func = HANDLER_STORE(handle).func
+
+    return this.<span class="apidocCodeKeywordSpan">allocateHandle</span>(function (ev) {
+        broadcast(ev, func);
+    })
+}
+
+DOMDelegator.prototype.addGlobalEventListener =
+function addGlobalEventListener(eventName, fn) {
+    var listeners = this.globalListeners[eventName] || [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator" id="apidoc.element.dom-delegator.dom_delegator">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>dom_delegator
+        <span class="apidocSignatureSpan">(document)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DOMDelegator(document) {
+    if (!(this instanceof DOMDelegator)) {
+        return new DOMDelegator(document);
+    }
+
+    document = document || globalDocument
+
+    this.target = document.documentElement
+    this.events = {}
+    this.rawEventListeners = {}
+    this.globalListeners = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.proxy_event" id="apidoc.element.dom-delegator.proxy_event">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>proxy_event
+        <span class="apidocSignatureSpan">(ev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProxyEvent(ev) {
+    if (!(this instanceof ProxyEvent)) {
+        return new ProxyEvent(ev)
+    }
+
+    if (rkeyEvent.test(ev.type)) {
+        return new KeyEvent(ev)
+    } else if (rmouseEvent.test(ev.type)) {
+        return new MouseEvent(ev)
+    }
+
+    for (var i = 0; i &#x3c; ALL_PROPS.length; i++) {
+        var propKey = ALL_PROPS[i]
+        this[propKey] = ev[propKey]
+    }
+
+    this._rawEvent = ev
+    this._bubbles = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.toString" id="apidoc.element.dom-delegator.toString">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.transformHandle" id="apidoc.element.dom-delegator.transformHandle">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>transformHandle
+        <span class="apidocSignatureSpan">(handle, broadcast)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformHandle(handle, broadcast) {
+    var func = HANDLER_STORE(handle).func
+
+    return this.allocateHandle(function (ev) {
+        broadcast(ev, func);
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-delegator.dom_delegator" id="apidoc.module.dom-delegator.dom_delegator">module dom-delegator.dom_delegator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.dom_delegator" id="apidoc.element.dom-delegator.dom_delegator.dom_delegator">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>dom_delegator
+        <span class="apidocSignatureSpan">(document)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DOMDelegator(document) {
+    if (!(this instanceof DOMDelegator)) {
+        return new DOMDelegator(document);
+    }
+
+    document = document || globalDocument
+
+    this.target = document.documentElement
+    this.events = {}
+    this.rawEventListeners = {}
+    this.globalListeners = {}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.allocateHandle" id="apidoc.element.dom-delegator.dom_delegator.allocateHandle">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.</span>allocateHandle
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function allocateHandle(func) {
+    var handle = new Handle()
+
+    HANDLER_STORE(handle).func = func;
+
+    return handle
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return handle
+}
+
+DOMDelegator.transformHandle =
+function transformHandle(handle, broadcast) {
+    var func = HANDLER_STORE(handle).func
+
+    return this.<span class="apidocCodeKeywordSpan">allocateHandle</span>(function (ev) {
+        broadcast(ev, func);
+    })
+}
+
+DOMDelegator.prototype.addGlobalEventListener =
+function addGlobalEventListener(eventName, fn) {
+    var listeners = this.globalListeners[eventName] || [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.transformHandle" id="apidoc.element.dom-delegator.dom_delegator.transformHandle">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.</span>transformHandle
+        <span class="apidocSignatureSpan">(handle, broadcast)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformHandle(handle, broadcast) {
+    var func = HANDLER_STORE(handle).func
+
+    return this.allocateHandle(function (ev) {
+        broadcast(ev, func);
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-delegator.dom_delegator.prototype" id="apidoc.module.dom-delegator.dom_delegator.prototype">module dom-delegator.dom_delegator.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.prototype.addEventListener" id="apidoc.element.dom-delegator.dom_delegator.prototype.addEventListener">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>addEventListener
+        <span class="apidocSignatureSpan">(target, type, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addEvent(target, type, handler) {
+    var events = EvStore(target)
+    var event = events[type]
+
+    if (!event) {
+        events[type] = handler
+    } else if (Array.isArray(event)) {
+        if (event.indexOf(handler) === -1) {
+            event.push(handler)
+        }
+    } else if (event !== handler) {
+        events[type] = [event, handler]
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    // `&#x3c;div&#x3e;` was clicked
+    console.log(&#x22;doSomething&#x22;, value.type)
+})
+
+var elem = document.querySelector(&#x22;.foo&#x22;)
+
+// add individual elems. (in a different file?)
+del.<span class="apidocCodeKeywordSpan">addEventListener</span>(elem.querySelector(&#x22;.bar&#x22;), &#x22;click&#x22;, function
+ (ev) {
+  emmitter.emit(&#x27;textClicked&#x27;, { type: &#x27;bar&#x27; })
+})
+del.addEventListener(elem.querySelector(&#x22;.baz&#x22;), &#x22;click&#x22;, function (ev) {
+  emitter.emit(&#x27;textClicked&#x27;, { type: &#x27;baz&#x27; })
+})
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.prototype.addGlobalEventListener" id="apidoc.element.dom-delegator.dom_delegator.prototype.addGlobalEventListener">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>addGlobalEventListener
+        <span class="apidocSignatureSpan">(eventName, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addGlobalEventListener(eventName, fn) {
+    var listeners = this.globalListeners[eventName] || [];
+    if (listeners.indexOf(fn) === -1) {
+        listeners.push(fn)
+    }
+
+    this.globalListeners[eventName] = listeners;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Sometimes you don&#x27;t want to add events bound to an element but
+  instead listen to them globally.
+
+```js
+var Delegator = require(&#x22;dom-delegator&#x22;)
+
+var d = Delegator()
+d.<span class="apidocCodeKeywordSpan">addGlobalEventListener</span>(&#x22;keydown&#x22;, function (ev) {
+    // hit for every global key press
+    // can implement keyboard shortcuts
+
+
+})
+
+d.addEventListener(document.documentElement, &#x22;keydown&#x22;, function (ev) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.prototype.listenTo" id="apidoc.element.dom-delegator.dom_delegator.prototype.listenTo">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>listenTo
+        <span class="apidocSignatureSpan">(eventName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listenTo(eventName) {
+    if (!(eventName in this.events)) {
+        this.events[eventName] = 0;
+    }
+
+    this.events[eventName]++;
+
+    if (this.events[eventName] !== 1) {
+        return
+    }
+
+    var listener = this.rawEventListeners[eventName]
+    if (!listener) {
+        listener = this.rawEventListeners[eventName] =
+            createHandler(eventName, this)
+    }
+
+    this.target.addEventListener(eventName, listener, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (!delegator) {
+        delegator = delegatorCache.delegators[cacheKey] =
+            new DOMDelegator(document)
+    }
+
+    if (opts.defaultEvents !== false) {
+        for (var i = 0; i &#x3c; commonEvents.length; i++) {
+            delegator.<span class="apidocCodeKeywordSpan">listenTo</span>(commonEvents[i])
+        }
+    }
+
+    return delegator
+}
+
+Delegator.allocateHandle = DOMDelegator.allocateHandle;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.prototype.removeEventListener" id="apidoc.element.dom-delegator.dom_delegator.prototype.removeEventListener">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>removeEventListener
+        <span class="apidocSignatureSpan">(target, type, handler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeEvent(target, type, handler) {
+    var events = EvStore(target)
+    var event = events[type]
+
+    if (!event) {
+        return
+    } else if (Array.isArray(event)) {
+        var index = event.indexOf(handler)
+        if (index !== -1) {
+            event.splice(index, 1)
+        }
+    } else if (event === handler) {
+        events[type] = null
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var listener = this.rawEventListeners[eventName]
+
+if (!listener) {
+    throw new Error(&#x22;dom-delegator#unlistenTo: cannot &#x22; +
+        &#x22;unlisten to &#x22; + eventName)
+}
+
+this.target.<span class="apidocCodeKeywordSpan">removeEventListener</span>(eventName, listener, true)
+}
+
+function createHandler(eventName, delegator) {
+var globalListeners = delegator.globalListeners;
+var delegatorTarget = delegator.target;
+
+return handler
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.prototype.removeGlobalEventListener" id="apidoc.element.dom-delegator.dom_delegator.prototype.removeGlobalEventListener">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>removeGlobalEventListener
+        <span class="apidocSignatureSpan">(eventName, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeGlobalEventListener(eventName, fn) {
+    var listeners = this.globalListeners[eventName] || [];
+
+    var index = listeners.indexOf(fn)
+    if (index !== -1) {
+        listeners.splice(index, 1)
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.dom_delegator.prototype.unlistenTo" id="apidoc.element.dom-delegator.dom_delegator.prototype.unlistenTo">
+        function <span class="apidocSignatureSpan">dom-delegator.dom_delegator.prototype.</span>unlistenTo
+        <span class="apidocSignatureSpan">(eventName)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unlistenTo(eventName) {
+    if (!(eventName in this.events)) {
+        this.events[eventName] = 0;
+    }
+
+    if (this.events[eventName] === 0) {
+        throw new Error(&#x22;already unlistened to event.&#x22;);
+    }
+
+    this.events[eventName]--;
+
+    if (this.events[eventName] !== 0) {
+        return
+    }
+
+    var listener = this.rawEventListeners[eventName]
+
+    if (!listener) {
+        throw new Error(&#x22;dom-delegator#unlistenTo: cannot &#x22; +
+            &#x22;unlisten to &#x22; + eventName)
+    }
+
+    this.target.removeEventListener(eventName, listener, true)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-delegator.proxy_event" id="apidoc.module.dom-delegator.proxy_event">module dom-delegator.proxy_event</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.proxy_event.proxy_event" id="apidoc.element.dom-delegator.proxy_event.proxy_event">
+        function <span class="apidocSignatureSpan">dom-delegator.</span>proxy_event
+        <span class="apidocSignatureSpan">(ev)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProxyEvent(ev) {
+    if (!(this instanceof ProxyEvent)) {
+        return new ProxyEvent(ev)
+    }
+
+    if (rkeyEvent.test(ev.type)) {
+        return new KeyEvent(ev)
+    } else if (rmouseEvent.test(ev.type)) {
+        return new MouseEvent(ev)
+    }
+
+    for (var i = 0; i &#x3c; ALL_PROPS.length; i++) {
+        var propKey = ALL_PROPS[i]
+        this[propKey] = ev[propKey]
+    }
+
+    this._rawEvent = ev
+    this._bubbles = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dom-delegator.proxy_event.prototype" id="apidoc.module.dom-delegator.proxy_event.prototype">module dom-delegator.proxy_event.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.proxy_event.prototype.preventDefault" id="apidoc.element.dom-delegator.proxy_event.prototype.preventDefault">
+        function <span class="apidocSignatureSpan">dom-delegator.proxy_event.prototype.</span>preventDefault
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">preventDefault = function () {
+    this._rawEvent.preventDefault()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    this._rawEvent = ev
+    this._bubbles = false;
+}
+
+ProxyEvent.prototype.preventDefault = function () {
+    this._rawEvent.<span class="apidocCodeKeywordSpan">preventDefault</span>()
+}
+
+ProxyEvent.prototype.startPropagation = function () {
+    this._bubbles = true;
+}
+
+function MouseEvent(ev) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dom-delegator.proxy_event.prototype.startPropagation" id="apidoc.element.dom-delegator.proxy_event.prototype.startPropagation">
+        function <span class="apidocSignatureSpan">dom-delegator.proxy_event.prototype.</span>startPropagation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startPropagation = function () {
+    this._bubbles = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
